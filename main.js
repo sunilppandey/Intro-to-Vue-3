@@ -4,7 +4,8 @@ const app = Vue.createApp({
     data() {
         return {
             product: 'Socks',
-            description: 'Green sock full size'
+            image: './assets/images/socks_blue.jpg',
+            googleUrl: 'https://www.google.com'
         }
     }
 })
