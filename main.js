@@ -5,7 +5,9 @@ const app = Vue.createApp({
         return {
             product: 'Socks',
             image: './assets/images/socks_blue.jpg',
-            googleUrl: 'https://www.google.com'
+            inStock: true,
+            inventory: 11,
+            onSale: true
         }
     }
 })
