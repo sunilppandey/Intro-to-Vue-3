@@ -3,10 +3,14 @@
 const app = Vue.createApp({
     data() {
         return {
-            cart: 0,
+            cart: [],
             premium: true,
             details: ['50% cotton', '30% wool', '20% polyester', '10% silk'],
         }
     },
-    methods: {}
+    methods: {
+        updateCart(id) {
+            this.cart.push(id)
+        }
+    }
 })
