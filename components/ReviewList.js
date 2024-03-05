@@ -14,11 +14,8 @@ app.component('review-list', {
              {{ review.name }} gave  this {{ review.rating }} stars
              <br/>
              "{{ review.review }}"
-<<<<<<< HEAD
              <br/>
              Recommend this product to others: {{ review.recommend }}
-=======
->>>>>>> 423522a0eef4c02a8a3aaecbd6e3e69651406417
            </li>
          </ul>
      </div>`
