@@ -17,6 +17,7 @@ app.component('review-form', {
       <option>2</option>
       <option>1</option>
     </select>
+<<<<<<< HEAD
     
     <br/>
     <label for="recommend">Would you recommend this product?</label>
@@ -24,6 +25,8 @@ app.component('review-form', {
       <option>Yes</option>
       <option>No</option>
     </select>
+=======
+>>>>>>> 423522a0eef4c02a8a3aaecbd6e3e69651406417
 
     <input class="button" type="submit" value="Submit">
   </form>`,
@@ -31,13 +34,21 @@ app.component('review-form', {
     return {
         name: '',
         review: '',
+<<<<<<< HEAD
         rating: null,
         recommend: null
+=======
+        rating: null
+>>>>>>> 423522a0eef4c02a8a3aaecbd6e3e69651406417
     }
   },
   methods: {
     OnSubmit() {
+<<<<<<< HEAD
         if(this.name === "" || this.review === "" || this.rating === null || this.recommend === null) {
+=======
+        if(this.name === "" || this.review === "" || this.rating === null) {
+>>>>>>> 423522a0eef4c02a8a3aaecbd6e3e69651406417
             alert("Please fill all review fields")
             return
         }
@@ -45,14 +56,21 @@ app.component('review-form', {
         let productReview = {
             name: this.name,
             review: this.review,
+<<<<<<< HEAD
             rating: this.rating,
             recommend: this.recommend
+=======
+            rating: this.rating
+>>>>>>> 423522a0eef4c02a8a3aaecbd6e3e69651406417
         }
         this.$emit('review-submitted', productReview)
         this.name = ''
         this.review = ''
         this.rating = null
+<<<<<<< HEAD
         this.recommend = null
+=======
+>>>>>>> 423522a0eef4c02a8a3aaecbd6e3e69651406417
     }
   }
 })
