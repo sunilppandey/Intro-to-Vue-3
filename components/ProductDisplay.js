@@ -31,14 +31,18 @@ app.component('product-display', {
           :style="{ backgroundColor: variant.color }">
         </div>
         <!-- v-on: shorthand @ -->
+        <!-- v-on:click="addToCart" -->
         <button
           class="button"
           :class="{ disabledButton: !inStock }" 
-          
-          v-on:click="addToCart">
+          @click="addToCart">
           Add to Cart
         </button>
-        <button class="button" @click="removeFromCart">Remove from Cart</button>
+        <button 
+          class="button" 
+          @click="removeFromCart">
+          Remove from Cart
+        </button>
       </div>
     </div>
   </div>`,
@@ -61,7 +65,8 @@ app.component('product-display', {
             this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
         },
         removeFromCart() {
-            this.cart -=1 
+            // this.cart -=1 
+            this.$emit('remove-from-cart', this.variants[this.selectedVariant].id)
         },
         updateVariant(index) {
             this.selectedVariant = index
